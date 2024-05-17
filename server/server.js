@@ -4,7 +4,14 @@ const router = require('./routes/routes')
 const app = express()
 require('./models/db')
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://todolistapp-pkfw.vercel.app"],
+        methods:["POST","GET","PUT","DELETE"],
+        credentials:true
+
+    }
+))
 app.use('/api/tasks' , router)
 app.listen('8000' , err => {
     if(err) console.log(err)

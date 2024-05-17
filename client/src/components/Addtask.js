@@ -3,6 +3,7 @@ import React ,{useState}from 'react'
 import axios from 'axios'
 function Addtask(props) {
     const [task,Settask] = useState("")
+    axios.defaults.withCredentials=true
     const addtask = () => {
         if(task.trim() === ''){
             return 
