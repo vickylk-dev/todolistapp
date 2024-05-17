@@ -7,7 +7,7 @@ function Addtask(props) {
         if(task.trim() === ''){
             return 
         } else {
-            axios.post('http://localhost:8000/api/tasks' , {
+            axios.post('https://todolistapp-lovat.vercel.app/api/tasks' , {
                 todo : task,
                 isComplete : false
             }).then(res => {
