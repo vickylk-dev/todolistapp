@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-
-module.exports = mongoose.connect('mongodb+srv://todolistapp:h1DT2XnCfMBOgzgG@todolistapp.8aowggl.mongodb.net/?retryWrites=true&w=majority&appName=todolistapp',{
+mongoose.set('strictQuery', false);
+module.exports = mongoose.connect('mongodb+srv://todolistapp:h1DT2XnCfMBOgzgG@todolistapp.8aowggl.mongodb.net/todolistapp?retryWrites=true&w=majority&appName=todolistapp',{
     useUnifiedTopology : true,
     useNewUrlParser : true,
     // useFindAndModify : true
