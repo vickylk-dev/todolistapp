@@ -13,7 +13,9 @@ app.use(cors(
     }
 ))
 app.use('/api/tasks' , router)
-app.listen('8000' , err => {
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT , err => {
     if(err) console.log(err)
-    console.log('Server is started at PORT number : 8000')
+    console.log(`Server is started at PORT number : ${PORT}`)
 })
