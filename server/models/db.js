@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
 
-module.exports = mongoose.connect('mongodb+srv://todolistapp:h1DT2XnCfMBOgzgG@todolistapp.8aowggl.mongodb.net/?retryWrites=true&w=majority&appName=todolistapp',{
-    useUnifiedTopology : true,
-    useNewUrlParser : true,
-    // useFindAndModify : true
+module.exports = mongoose.connect('mongodb+srv://todolistapp:h1DT2XnCfMBOgzgG@todolistapp.8aowggl.mongodb.net/todolistapp?retryWrites=true&w=majority', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
 }, err => {
-    if(err) console.log(`Error in DB Connection ${err}`)
-    console.log(`MongoDB Connection Suceeded.....`)
-})
+    if (err) console.error(`Error in DB Connection ${err}`);
+    console.log(`MongoDB Connection Succeeded.....`);
+});
