@@ -10,7 +10,7 @@ function App(){
   const [tasktoUpdate,setTasktoUpdate]=useState({})
   const [showPopup,setShowPopup]=useState(false)
   useEffect(()=>{
-    axios.get('http://localhost:8000/api/tasks')
+    axios.get('https://todolistapp-lovat.vercel.app/api/tasks')
     .then(res=>{
       setTodolist(res.data)
     })
