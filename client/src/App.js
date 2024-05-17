@@ -9,9 +9,11 @@ function App(){
   const [todolist,setTodolist]=useState([])
   const [tasktoUpdate,setTasktoUpdate]=useState({})
   const [showPopup,setShowPopup]=useState(false)
-  axios.defaults.withCredentials=true
+  
   useEffect(()=>{
-    axios.get('https://todolistapp-lovat.vercel.app/api/tasks')
+    axios.get('https://todolistapp-lovat.vercel.app/api/tasks', {
+        withCredentials: true
+    })
     .then(res=>{
       setTodolist(res.data)
     })
