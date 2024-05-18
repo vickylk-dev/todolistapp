@@ -46,3 +46,12 @@
         background-position: 10% 0%;
     }
 }
+
+@media (max-width: 768px) {
+    .addtask button {
+        width: 20%;
+        padding: 10px 5px;
+        margin-left: 5px;
+        font-size: 15px;
+    }
+}

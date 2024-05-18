@@ -6,7 +6,6 @@
     margin-top: 30px;
     border-top: 2px solid rgba(0,0,0,0.1);
     padding: 30px;
-    position: relative;
 }
 .todohead{
     margin-bottom: 10px;
@@ -26,6 +25,7 @@
     font-weight: bolder;
     transition: .4s;
     user-select: none;
+    margin-top: 10px;
 }
 .tasklist ul li .isComplete{
     visibility: visible;
@@ -42,7 +42,6 @@
     text-decoration: line-through;
 }
 .tasklist ul li p{
-    width:700px;
     overflow: hidden;
     white-space:nowrap;
     text-overflow: ellipsis;
@@ -70,4 +69,25 @@
 .tasklist ul li:hover{
     background-color: #ddd;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .tasklist ul {
+        width: 90%;
+    }
+
+    .tasklist ul li {
+        font-size: 17px;
+        flex-direction: row;
+        
+    }
+
+    .tasklist ul li p {
+        width: 100%;
+    }
+
+    .tasklist ul li .edit, .tasklist ul li .close {
+        margin-left: 5px;
+        font-size: 22px;
+    }
 }
