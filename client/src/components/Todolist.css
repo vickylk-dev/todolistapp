@@ -82,6 +82,11 @@
         
     }
 
+    .tasklist ul li:hover{
+        background-color: none;
+        cursor: pointer;
+    }
+
     .tasklist ul li p {
         width: 100%;
     }
